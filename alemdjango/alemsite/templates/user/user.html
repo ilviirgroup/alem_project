@@ -1,0 +1,11 @@
+{% extends 'index.html'%}
+{% block content %}
+
+    {% for user in user %}
+        <p>Username:{{ user.username }}</p>
+        <p>Email:{{ user.email }}</p>
+        <p>Phone:{{ user.phone }}</p>
+        <p>{{ user.is_staff }}</p>
+
+    {% endfor %}
+{% endblock %}

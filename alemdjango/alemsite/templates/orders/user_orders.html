@@ -1,0 +1,28 @@
+{% extends 'index.html'%}
+{% block content %}
+<h5>Order List</h5>
+    <table border="1">
+    <tr>
+        <th width="100">Alem id</th>
+        <th width="350">Name</th>
+        <th width="100">Color</th>
+        <th width="60">Size</th>
+        <th width="100">Quantity</th>
+        <th width="200">User</th>
+        <th width="100">Completed</th>
+        <th width="200">Date</th>
+    </tr>
+        {% for item in list %}
+    <tr>
+        <td>{{ item.ai }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.color }}</td>
+        <td>{{ item.size }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.user }}</td>
+        <td>{{ item.completed }}</td>
+        <td>{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

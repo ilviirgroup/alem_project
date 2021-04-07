@@ -1,0 +1,35 @@
+{% extends 'index.html'%}
+{% block content %}
+
+    <h5>Products in categories</h5>
+    <table border="1">
+    <tr>
+        <th width="250">Category</th>
+        <th width="150">Prodducts</th>
+    </tr>
+    {% for item in cats %}
+          <tr>
+        <td>{{ item.name }}</td>
+           <td> {{ item.products__count }}</td>
+          </tr>
+    {% endfor %}
+    </table>
+
+        <h5>Products in Subcategories</h5>
+    <table border="1">
+    <tr>
+        <th width="250">Subcategory</th>
+        <th width="150">Prodducts</th>
+    </tr>
+    {% for item in subs %}
+          <tr>
+        <td>{{ item.name }}</td>
+           <td> {{ item.products__count }}</td>
+          </tr>
+    {% endfor %}
+    </table>
+
+-----------------------------------------------------------------------------------------------
+<h6>Messages::{{ messages }}</h6>
+
+{% endblock %}

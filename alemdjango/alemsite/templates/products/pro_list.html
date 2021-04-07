@@ -1,0 +1,9 @@
+{% extends 'index.html'%}
+{% block content %}
+{% for product in products %}
+    <img src="{{ product.photo.url }}" width="250">
+    <a href="{{ product.get_absolute_url }}"><p>Name:<b>{{ product.name }}</b></p></a>
+    <p>Price:<b>{{ product.price }}</b></p>
+    {% endfor %}
+{{ products.name }}
+{% endblock %}html>

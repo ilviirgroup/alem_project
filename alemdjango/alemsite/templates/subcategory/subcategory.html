@@ -1,0 +1,12 @@
+{% extends 'index.html'%}
+{% block content %}
+    {% for item in subcategory %}
+        Id:
+        <p>{{ item.id }}</p>
+        Category:
+        <p>{{ item.category }}</p>
+        Subcategory Name:
+    <p>{{ item.name }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}

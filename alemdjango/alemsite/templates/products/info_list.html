@@ -1,0 +1,25 @@
+{% extends 'index.html'%}
+{% block content %}
+<img src="{{ info.photo.url }}" width="300">
+        <p>  Alem id: <b>{{ info.category.id }}{{ info.category.ai }}{{ info.subcategory.id }}</b></p>
+        <p>Name:<b>{{ info.name }}</b></p>
+        <p>Color:<b>{{ info.color }}</b></p>
+        <p>Description:<b>{{info.description }}</b></p>
+        <p>Price:<b>{{ info.price }}</b></p>
+        <p>Size:<b>{{ info.size }}</b></p>
+        <p>Status:<b>{{ info.status }}</b></p>
+        <p>Subcategory:<b>{{ info.subcategory }}</b></p>
+    <p>pk:{{ info.category }}</p>
+        <a href="{% url 'orders' info.category.pk info.pk %}" ><button  type="submit" > Order </button></a>
+    <form method="post" class="form-control">
+    {% csrf_token %}
+    {{ form.as_p }}
+        {{ form.namee }}
+    <button type="submit" class="btn btn-primary btn-block" >Favorites</button>
+    </form>
+
+        <img src="{{ info.photo1.url }}" width="200">
+
+        <img src="{{ info.photo2.url }}" width="200">
+        <img src="{{ info.photo3.url }}" width="200">
+{% endblock %}html>
