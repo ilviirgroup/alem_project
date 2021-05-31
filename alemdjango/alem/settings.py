@@ -26,7 +26,7 @@ SECRET_KEY = 'z_t(7re86mk$h73mgkd31w*z^9o1e5d&zp0%g8+xbuon1j&(3('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alemshop.com.tm']
 
 
 # Application definition
